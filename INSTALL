@@ -1,0 +1,35 @@
+These is the install file for the ShortenUrlEasily extension.
+
+
+=== Download ===
+
+You can get the code directly from Git.
+
+$ git clone https://github.com/uta/ShortenUrlEasily.git
+
+
+=== Installation ===
+
+Once you have downloaded the code, place the ''ShortenUrlEasily'' directory
+to extensions directory of your MediaWiki.
+
+Then add the following code to your LocalSettings.php:
+
+require_once( "$IP/extensions/ShortenUrlEasily/ShortenUrlEasily.php" );
+
+
+=== Settings of the web server ===
+
+Then you must configure the web server.
+Here are rules with the Apache web server.
+
+RewriteEngine On
+RewriteRule   ^/?w/([a-z]+)/(.*)$ /mediawiki/index.php?action=$1&title=$2 [L,QSA]
+RewriteRule   ^/?wiki(/.*)?$      /mediawiki/index.php                    [L]
+
+
+See also:
+  * http://www.mediawiki.org/wiki/Manual:Short_URL
+  * http://www.mediawiki.org/wiki/Manual:$wgActionPaths
+  * http://www.mediawiki.org/wiki/Manual:Short_URL/Apache
+
