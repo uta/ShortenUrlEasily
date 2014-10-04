@@ -17,6 +17,7 @@ class ShortenUrlEasily {
     'render',
     'revert',
     'rollback',
+    'search',
     'submit',
     'unprotect',
     'unwatch',
