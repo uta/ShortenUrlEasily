@@ -34,8 +34,8 @@ Then you must configure the web server.
 Here are rules with the Apache web server.
 
 RewriteEngine On
-RewriteRule   ^/?wiki/([a-z]+)/(.*)$  /mediawiki/index.php?action=$1&title=$2 [L,QSA]
-RewriteRule   ^/?wiki(/.*)?$          /mediawiki/index.php                    [L]
+RewriteRule   ^/?wiki/([a-z]+)/(.*)$  /mediawiki/index.php [L,QSA]
+RewriteRule   ^/?wiki(/.*)?$          /mediawiki/index.php [L]
 
 
 See also:
