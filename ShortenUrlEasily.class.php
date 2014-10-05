@@ -27,10 +27,10 @@ class ShortenUrlEasily {
     'watch',
   );
 
-  public static function init($article = 'wiki', $action = 'w') {
+  public static function init($path = 'wiki') {
     global $wgArticlePath, $wgActionPaths;
-    $wgArticlePath = "/$article/$1";
-    foreach(self::$action_list as $a) $wgActionPaths[$a] = "/$action/$a/$1";
+    $wgArticlePath = "/$path/$1";
+    foreach(self::$action_list as $a) $wgActionPaths[$a] = "/$path/$a/$1";
   }
 }
 
