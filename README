@@ -31,13 +31,16 @@ require_once( "$IP/extensions/ShortenUrlEasily/ShortenUrlEasily.php" );
 == Settings of the web server ==
 
 Then you must configure the web server.
-Here are rules with the Apache web server.
+Here are example rules with the Apache web server.
 
 RewriteEngine On
-RewriteRule   ^/?wiki(/.*)?$ /mediawiki/index.php [L,QSA]
+RewriteCond   %{REQUEST_FILENAME} !-d
+RewriteCond   %{REQUEST_FILENAME} !-f
+RewriteRule   ^wiki(/.*)?$ /mediawiki/index.php [L,QSA]
 
 
 See also:
   * http://www.mediawiki.org/wiki/Manual:Short_URL
-  * http://www.mediawiki.org/wiki/Manual:$wgActionPaths
   * http://www.mediawiki.org/wiki/Manual:Short_URL/Apache
+  * http://www.mediawiki.org/wiki/Manual:$wgArticlePath
+  * http://www.mediawiki.org/wiki/Manual:$wgActionPaths
