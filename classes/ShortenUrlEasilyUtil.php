@@ -1,5 +1,6 @@
 <?php
-class ShortenUrlEasily {
+if(!defined('MEDIAWIKI')) die;
+class ShortenUrlEasilyUtil {
   public static $action_list = array(
     'creativecommons',
     'credits',
@@ -27,11 +28,11 @@ class ShortenUrlEasily {
     'watch',
   );
 
-  public static function init($path = 'wiki') {
+  public static function configure($path = 'wiki') {
     global $wgArticlePath, $wgActionPaths;
     $wgArticlePath = "/$path/$1";
     foreach(self::$action_list as $a) $wgActionPaths[$a] = "/$path/$a/$1";
   }
 }
 
-ShortenUrlEasily::init();
+ShortenUrlEasilyUtil::configure();
