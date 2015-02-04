@@ -14,7 +14,6 @@ $wgExtensionCredits['other'][] = array(
   'license-name'    => 'MIT-License',
 );
 
-$wgExtensionMessagesFiles[$ext] = "$dir/i18n/_backward_compatibility.php";
-$wgMessagesDirs[$ext]           = "$dir/i18n";
+$wgMessagesDirs[$ext] = "$dir/i18n";
 
 require_once("$dir/classes/${ext}Util.php");

@@ -1,2 +1,5 @@
+=== Version 0.x (2015/xx/xx) ===
+* Backward compatibility of i18n is removed because the official support of that version was discontinued
+
 === Version 0.1 (2014/10/12) ===
 * Initial release
